@@ -1,5 +1,7 @@
-const browser = require('./browser');
-const dateScraper = require('./dateScraper');
+'use strict';
+
+import browser from './browser';
+import dateScraper from './dateScraper';
 
 const TRAVEL_GOV_URL = process.env['TRAVEL_GOV_URL'];
 

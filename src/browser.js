@@ -1,4 +1,6 @@
-const puppeteer = require('puppeteer');
+'use strict';
+
+import puppeteer from 'puppeteer';
 
 async function startBrowser() {
     let browser;
@@ -14,6 +16,6 @@ async function startBrowser() {
     return browser;
 }
 
-module.exports = {
+export default {
     startBrowser
 };

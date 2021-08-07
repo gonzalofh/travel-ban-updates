@@ -1,3 +1,5 @@
+'use strict';
+
 const selector = 'div.contentbody';
 const dateRe = new RegExp('Last updated: (\w{1,9} \d{1,2}, 2021)');
 
@@ -18,7 +20,7 @@ function lookupDate(text) {
     return dateRe.exec(text)[1];
 }
 
-module.exports = (browser) => { 
+export default (browser) => { 
     return {
         apply: async function(url) {
             const page = await loadPage(browser, url);

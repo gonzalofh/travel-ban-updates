@@ -1,10 +1,40 @@
 {
     "name": "travel-ban-updates",
+    "author": "Gonzalo Fernandez",
     "version": "0.0.1",
+    "description": "This script acts a web scraper for the Covid-19 travel restrictions page on the US Gov Travel website. It returns the last date that guidelines were updated.",
+    "main": "dist/umd/index.js",
+    "module": "dist/mjs/index.mjs",
+    "license": "ISC",
     "dependencies": {
         "puppeteer": "^10.2.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gonzalofh/plaid-client.git"
+    },
     "scripts": {
-        "start": "node index.js"
+        "start": "rollup -c --watch --environment SERVE:true",
+        "build": "npm run test && rollup -c",
+        "test": "jest plugin.test.js",
+        "prepublish": "npm run test && rollup -c --silent"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-proposal-private-methods": "^7.12.1",
+        "@babel/plugin-transform-async-to-generator": "^7.12.1",
+        "@babel/plugin-transform-regenerator": "^7.12.1",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@rollup/plugin-babel": "^5.2.3",
+        "@rollup/plugin-commonjs": "^15.1.0",
+        "@rollup/plugin-node-resolve": "^9.0.0",
+        "@types/jest": "^26.0.20",
+        "babel-eslint": "^10.1.0",
+        "jest": "^26.6.3",
+        "rollup": "^2.38.2",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-terser": "^7.0.2"
     }
 }
