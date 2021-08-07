@@ -2,9 +2,8 @@ const browser = require('./browser');
 const dateScraper = require('./dateScraper');
 
 const TRAVEL_GOV_URL = process.env['TRAVEL_GOV_URL'];
-const LAST_UPDATE = process.env['LAST_UPDATE'];
 
-async function run() {
+module.exports = async () => {
 
 	let browserInstance;
 
@@ -16,15 +15,9 @@ async function run() {
 
 	const scraper = dateScraper(browserInstance);
 	const update = await scraper.apply(TRAVEL_GOV_URL);
-	
-	if (LAST_UPDATE === update) {
-		console.log("Not updated yet.")
-	} else {
-		console.log("Updated!");
-	}
 
 	browserInstance.close();
 
-}
+	return update;
 
-run();
+}

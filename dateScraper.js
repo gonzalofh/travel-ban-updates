@@ -1,5 +1,5 @@
 const selector = 'div.contentbody';
-const dateRe = new RegExp('Last updated: (.*), 2021');
+const dateRe = new RegExp('Last updated: (\w{1,9} \d{1,2}, 2021)');
 
 async function loadPage(browser, url) {
     const page = await browser.newPage();

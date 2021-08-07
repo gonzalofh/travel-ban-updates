@@ -6,8 +6,5 @@
     },
     "scripts": {
         "start": "node index.js"
-    },
-    "devDependencies": {
-        "@google-cloud/functions-framework": "^1.1.1"
     }
 }

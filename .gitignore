@@ -1,3 +1,4 @@
+.env
 .vscode
 node_modules
 run-local.sh
