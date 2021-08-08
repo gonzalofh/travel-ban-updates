@@ -1,7 +1,7 @@
 {
     "name": "travel-ban-updates",
     "author": "Gonzalo Fernandez",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "This script acts a web scraper for the Covid-19 travel restrictions page on the US Gov Travel website. It returns the last date that guidelines were updated.",
     "main": "index.js",
     "license": "ISC",
