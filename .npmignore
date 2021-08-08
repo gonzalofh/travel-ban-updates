@@ -1,4 +1,3 @@
-node_modules
-.vscode
-dist
-backup
+node_modules/
+.vscode/
+src/

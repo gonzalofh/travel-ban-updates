@@ -1,13 +1,10 @@
 {
     "name": "travel-ban-updates",
     "author": "Gonzalo Fernandez",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "This script acts a web scraper for the Covid-19 travel restrictions page on the US Gov Travel website. It returns the last date that guidelines were updated.",
     "main": "index.js",
     "license": "ISC",
-    "dependencies": {
-        "puppeteer": "^10.2.0"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/gonzalofh/travel-ban-updates.git"
@@ -17,6 +14,10 @@
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
-        "babel-preset-es2015": "^6.24.1"
+        "babel-preset-es2015": "^6.24.1",
+        "puppeteer": "^10.2.0"
+    },
+    "dependencies": {
+        "puppeteer-core": "^10.2.0"
     }
 }
